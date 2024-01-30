@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+:root {
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100svh;
+  background-color: #2e2e2e;
+  color: #fefefe;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.RenderMoviesBlock {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 72px;
+  margin: 72px;
+}
+
+.SingleMovieBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  border-radius: 8px;
+  /* border: 1px solid white; */
+  box-shadow: 20px 20px 40px #232323, -20px -20px 40px #3a3a3a;
+}
+.movie-poster {
+  max-width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  img {
+    border-image: linear-gradient(#121212, #595959) 100;
+    border-width: 4px;
+    border-style: solid;
+  }
+}
+.movie-details {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.name {
+  font-weight: 600;
+}
+.year {
+  margin: 0.7rem;
+}
+.year::before {
+  content: 'Year: ';
+}
+.rating {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.rating::before {
+  content: 'Rating: ';
+}
