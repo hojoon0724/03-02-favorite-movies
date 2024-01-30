@@ -1,4 +1,4 @@
-function OneMovieBlock(props) {
+function SingleMovieBlock(props) {
   return (
     <div className="SingleMovieBlock">
       <div className="movie-poster">
@@ -13,4 +13,4 @@ function OneMovieBlock(props) {
   )
 }
 
-export default OneMovieBlock
+export default SingleMovieBlock
